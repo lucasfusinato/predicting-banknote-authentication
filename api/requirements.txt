@@ -1,0 +1,4 @@
+fastapi[all]==0.70.1
+uvicorn[standard]==0.15.0
+python-dotenv==0.19.2
+scikit-learn==1.0.2

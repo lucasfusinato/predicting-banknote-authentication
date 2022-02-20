@@ -16,3 +16,17 @@ services:
     volumes:
       - ./jupyter/data:/home/jovyan/data
       - ./jupyter/notebooks:/home/jovyan/notebooks
+      - ./jupyter/output:/home/jovyan/output
+  api:
+    build: ./api
+    container_name: banknoteauthentication_api
+    command: ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--reload"]
+    restart: always
+    networks:
+      - banknoteauthentication
+    ports:
+      - 8000:8000
+    volumes:
+      - ./api/app.cfg:/api/app.cfg
+      - ./api/app:/api/app
+      - ./api/model:/api/model
