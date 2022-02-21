@@ -10,7 +10,18 @@ This project is adapted from a [practice activity](./docs/problem_statement.pdf)
 
 Besides the proposed activity, was developed an REST API to execute trained model with dynamic parameters, simulating a real world scenario where predictions should be accessible on real time.
 
-## Reproducing analysis
+## Project structure
+
+Project structure consists in following components:
+
+    .
+    ├── api                   # Rest API files
+    ├── docs                  # Documentation files
+    ├── jupyter               # Jupyter environment with default notebooks
+    ├── docker-compose.yml    # Environment start-up specification
+    └── README.md             
+
+## Reproducing environment
 
 The [Docker Compose file](./docker-compose.yml) is configured to setup a Jupyter environment to perform data analysis and start REST API. So, considering you have it installed in your machine, all you need is run the following commands in a terminal window:
 
